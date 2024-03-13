@@ -112,7 +112,9 @@ applications:
   admin:
     # The runtime the application uses.
     type: nodejs:20
-    # How many resources to devote to the app. Defaults to AUTO in production environments.
+    # How many resources to devote to the app. If not set, default to the predefined runtime definition.
+    # For more information, please see https://docs.upsun.com/manage-resources/adjust-resources.html#advanced-container-profiles
+    container_profile: BALANCED
 
     # Mounts define directories that are writable after the build is complete. If set as a local source, disk property is required.
     mounts:
@@ -180,6 +182,8 @@ applications:
     # The runtime the application uses.
     type: 'nodejs:20'
 
+    # How many resources to devote to the app. If not set, default to the predefined runtime definition.
+    # For more information, please see https://docs.upsun.com/manage-resources/adjust-resources.html#advanced-container-profiles
     container_profile: BALANCED
 
     # Mounts define directories that are writable after the build is complete. If set as a local source, disk property is required.
