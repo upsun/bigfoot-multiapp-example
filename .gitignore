@@ -1,0 +1,52 @@
+# API
+###> symfony/framework-bundle ###
+/api/.env.local
+/api/.env.local.php
+/api/.env.*.local
+/api/config/secrets/prod/prod.decrypt.private.php
+/api/public/bundles/
+/api/var/
+/api/var/cache/
+/api/var/log/
+/api/var/sessions/
+/api/vendor/
+###< symfony/framework-bundle ###
+###> symfony/webpack-encore-bundle ###
+/api/node_modules/
+/api/public/build/
+/api/npm-debug.log
+/api/yarn-error.log
+###< symfony/webpack-encore-bundle ###
+###> symfony/phpunit-bridge ###
+/api/.phpunit.result.cache
+/api/phpunit.xml
+###< symfony/phpunit-bridge ###
+/api/.idea
+# Main Lando file (should be copied from .lando.symfony.yml or .lando.platformsh.yml)
+/api/.lando.yml
+
+# ADMIN
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# dependencies
+/admin/node_modules
+/admin/.pnp
+/admin/.pnp.js
+# testing
+/admin/coverage
+# production
+/admin/build
+# misc
+/admin/.DS_Store
+/admin/.env.local
+/admin/.env.development.local
+/admin/.env.test.local
+/admin/.env.production.local
+/admin/npm-debug.log*
+/admin/yarn-debug.log*
+/admin/yarn-error.log*
+
+# GATSBY
+/gatsby/node_modules/
+/gatsby/.cache/
+/gatsby/public
+
