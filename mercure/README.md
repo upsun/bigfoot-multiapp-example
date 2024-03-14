@@ -6,7 +6,7 @@ Mercure is especially useful to add streaming capabilities to REST and GraphQL A
 
 See https://mercure.rocks.
 
-Make sure you change in `.mercure/.environment`
+Make sure you change in `mercure/.environment`
 
 ```
 MERCURE_PUBLISHER_JWT_KEY='!ChangeMe!'

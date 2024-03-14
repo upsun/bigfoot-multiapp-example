@@ -6,7 +6,7 @@
 </a>
 </p>
 
-<h1 align="center">Deploy a multi-app project with Bigfoot website, API Platform admin (ReactJS), Gatsby website and Mercure.rocks server on Upsun</h1>
+<h1 align="center">[DEMO] Deploy a multi-app project with Bigfoot website, API Platform admin (ReactJS), Gatsby website and Mercure.rocks server on Upsun</h1>
 
 <p align="center">
 <strong>Contribute, request a feature, or check out our resources</strong>
@@ -15,17 +15,17 @@
 <a href="https://community.platform.sh"><strong>Join our community</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="https://docs.upsun.com"><strong>Documentation</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="https://platform.sh/blog"><strong>Blog</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/flovntp/upsun_multi-app-example/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/flovntp/upsun_multi-app-example/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Request a feature</strong></a>
+<a href="https://github.com/upsun/bigfoot-multiapp-example/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/upsun/bigfoot-multiapp-example/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Request a feature</strong></a>
 <br /><br />
 </p>
 
 <p align="center">
-<a href="https://github.com/flovntp/upsun_multi-app-example/issues">
-<img src="https://img.shields.io/github/issues/flovntp/upsun_multi-app-example.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Issues" alt="Open issues" />
+<a href="https://github.com/upsun/bigfoot-multiapp-example/issues">
+<img src="https://img.shields.io/github/issues/upsun/bigfoot-multiapp-example.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Issues" alt="Open issues" />
 </a>&nbsp&nbsp
-<a href="https://github.com/flovntp/upsun_multi-app-example/pulls">
-<img src="https://img.shields.io/github/issues-pr/flovntp/upsun_multi-app-example.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Pull%20requests" alt="Open PRs" />
+<a href="https://github.com/upsun/bigfoot-multiapp-example/pulls">
+<img src="https://img.shields.io/github/issues-pr/upsun/bigfoot-multiapp-example.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Pull%20requests" alt="Open PRs" />
 </a>&nbsp&nbsp
 </p>
 
@@ -43,6 +43,10 @@
 <br />
 </p>
 <hr>
+
+> **_DISCLAIMER:_**
+> <BR>This is an example codebase to host a multiple applications project with <a href="https://upsun.com/">Upsun</a>.
+> <BR>This repo is used in [this blogpost](https://upsun.com/blog/upsun-and-running-with-multiple-applications/) as a starting point for the users and is not meant to be updated along the way.
 
 ## About
 
@@ -64,18 +68,18 @@
 
 ### Local development
 
-This section provides instructions for running the `Bigfoot Multi-app` template locally, connected to a local database instance.
+This section provides instructions for running the `Bigfoot Multi-app Example`  locally, connected to a local database instance.
 
 In all cases for developing with Upsun, it's important to develop on an isolated environment - do not connect to data on your production environment when developing locally.
 
 Each of the options below assume that you have already deployed this template to Upsun, as well as the following starting commands:
 
-1. Install the Symfony CLI
+1. Install the Upsun CLI
 
-   Follow the instructions to [install the Symfony CLI](https://symfony.com/download) for your operating system.
-   You can verify the installation by logging in (`symfony login`) and listing your projects (`symfony project:list`).
+   Follow the instructions to [install the Upsun CLI](https://docs.upsun.com/administration/cli.html) for your operating system.
+   You can verify the installation by logging in (`upsun login`) and listing your projects (`upsun project:list`).
 
-1. Find your `PROJECT_ID` by running the command `symfony project:list`
+1. Find your `PROJECT_ID` by running the command `upsun project:list`
 
    ```bash
    +---------------+------------------------------------+------------------+---------------------------------+
@@ -86,15 +90,14 @@ Each of the options below assume that you have already deployed this template to
    ```
 1. Get your Upsun project
    ```
-   symfony get PROJECT_ID
+   upsun get PROJECT_ID
    cd <PROJECT_FOLDER>
    ```
 
-   or clone this repo if you don't have any existing project
+   or fork this repo if you don't have any existing project and then clone your own repo
    ```
-   git clone git@github.com:flovntp/upsun_multi-app-example.git bigfoot-multiapp
+   git clone git@github.com:<YOUR-ORGANIZATION>/bigfoot-multiapp-example.git bigfoot-multiapp
    cd bigfoot-multiapp
-   
    ```
 
 1. Start the API component:
@@ -173,17 +176,17 @@ Each of the options below assume that you have already deployed this template to
 
 1. Create a new branch
    ```
-   symfony branch new_branch
+   upsun branch new_branch
    ```
 1. Develop your feature and commit it in GIT
 1. Push your code to your environment (can be done multiple time)
    ```
-   symfony push
+   upsun push
    ```
 1. Push to production
    ```
-   symfony checkout main
-   symfony merge new_branch
+   upsun checkout main
+   upsun merge new_branch
    ```
 > **Note:**
 > For many of the steps above, you may need to include the CLI flags `-p PROJECT_ID` and `-e ENVIRONMENT_ID` if you are not in the project directory or if the environment is associated with an existing pull request.
@@ -200,14 +203,14 @@ This repository has all the code it needs in order to deploy to Upsun.
 
    [Register for a 30 day free trial with Upsun](https://auth.api.upsun.com/register). When you have completed signup, select the **Create from scratch** project option. Give you project a name, and select a region where you would like it to be deployed. As for the *Production environment* option, make sure to match it to this repository's settings, or to what you have updated the default branch to locally.
 
-1. Install the Symfony CLI
+1. Install the Upsun CLI
 
-   Follow the instructions to [install the Symfony CLI](https://symfony.com/download) for your operating system.
-   You can verify the installation by logging in (`symfony login`) and listing your projects (`symfony project:list`).
+   Follow the instructions to [install the Upsun CLI](https://docs.upsun.com/administration/cli.html) for your operating system.
+   You can verify the installation by logging in (`upsun login`) and listing your projects (`upsun project:list`).
 
 1. Set the project remote
 
-   Find your `PROJECT_ID` by running the command `symfony project:list`
+   Find your `PROJECT_ID` by running the command `upsun project:list`
 
    ```bash
    +---------------+------------------------------------+------------------+---------------------------------+
@@ -217,7 +220,7 @@ This repository has all the code it needs in order to deploy to Upsun.
    +---------------+------------------------------------+------------------+---------------------------------+
    ```
 
-   Then from within your local copy, run the command `symfony project:set-remote PROJECT_ID`.
+   Then from within your local copy, run the command `upsun project:set-remote PROJECT_ID`.
 
 1. Push using git
 
@@ -225,10 +228,10 @@ This repository has all the code it needs in order to deploy to Upsun.
    git push upsun DEFAULT_BRANCH
    ```
 
-1. or Push using platform CLI
+1. or Push using Upsun CLI
 
    ```bash
-   symfony push
+   upsun push
    ```
 
 <!-- <br/>
@@ -244,10 +247,10 @@ This repository has all the code it needs in order to deploy to Upsun.
 
    [Register for a 30 day free trial with Upsun](https://auth.api.upsun.com/register). When you have completed signup, select the **Create from scratch** project option. Give you project a name, and select a region where you would like it to be deployed. As for the *Production environment* option, make sure to match it to whatever you have set at `https://YOUR_NAMESPACE/nextjs-drupal`.
 
-1. Install the Symfony CLI
+1. Install the Upsun CLI
 
-   Follow the instructions to [install the Symfony CLI](https://symfony.com/download) for your operating system.
-   You can verify the installation by logging in (`symfony login`) and listing your projects (`symfony project:list`).
+   Follow the instructions to [install the Upsun CLI](https://docs.upsun.com/administration/cli.html) for your operating system.
+   You can verify the installation by logging in (`upsun login`) and listing your projects (`upsun project:list`).
 
 1. Setup the integration:
 
@@ -267,10 +270,10 @@ This repository has all the code it needs in order to deploy to Upsun.
 
    [Register for a 30 day free trial with Upsun](https://auth.api.upsun.com/register). When you have completed signup, select the **Create from scratch** project option. Give you project a name, and select a region where you would like it to be deployed. As for the *Production environment* option, make sure to match it to this repository's settings, or to what you have updated the default branch to locally.
 
-1. Install the Symfony CLI
+1. Install the Upsun CLI
 
-   Follow the instructions to [install the Symfony CLI](https://symfony.com/download) for your operating system.
-   You can verify the installation by logging in (`symfony login`) and listing your projects (`symfony project:list`).
+   Follow the instructions to [install the Upsun CLI](https://docs.upsun.com/administration/cli.html) for your operating system.
+   You can verify the installation by logging in (`upsun login`) and listing your projects (`upsun project:list`).
 
 1. Create the repository
 
@@ -294,10 +297,10 @@ This repository has all the code it needs in order to deploy to Upsun.
 
    [Register for a 30 day free trial with Upsun](https://auth.api.upsun.com/register). When you have completed signup, select the **Create from scratch** project option. Give you project a name, and select a region where you would like it to be deployed. As for the *Production environment* option, make sure to match it to this repository's settings, or to what you have updated the default branch to locally.
 
-1. Install the Symfony CLI
+1. Install the Upsun CLI
 
-   Follow the instructions to [install the Symfony CLI](https://symfony.com/download) for your operating system.
-   You can verify the installation by logging in (`symfony login`) and listing your projects (`symfony project:list`).
+   Follow the instructions to [install the Upsun CLI](https://docs.upsun.com/administration/cli.html) for your operating system.
+   You can verify the installation by logging in (`upsun login`) and listing your projects (`upsun project:list`).
 
 1. Create the repository
 
@@ -322,7 +325,7 @@ If you are moving an existing site to Upsun, then in addition to code you also n
 First, obtain a database dump from your current site and save your dump file as `database.sql`. Then, import the database into your Upsun site using the CLI:
 
 ```bash
-symfony sql -e main < database.sql
+upsun sql -e main < database.sql
 ```
 
 </details>
@@ -332,16 +335,16 @@ symfony sql -e main < database.sql
 You first need to download your files from your current hosting environment.
 The easiest way is likely with rsync, but consult your old host's documentation.
 
-The `symfony mount:upload` command provides a straightforward way to upload an entire directory to your site at once to a `mount` defined in a `.platform.app.yaml` file.
+The `upsun mount:upload` command provides a straightforward way to upload an entire directory to your site at once to a `mount` defined in a `.upsun/config.yaml` file.
 Under the hood, it uses an SSH tunnel and rsync, so it is as efficient as possible.
-(There is also a `symfony mount:download` command you can use to download files later.)
+(There is also a `upsun mount:download` command you can use to download files later.)
 Run the following from your local Git repository root (modifying the `--source` path if needed and setting `BRANCH_NAME` to the branch you are using).
 
 A few examples are listed below, but repeat for all directories that contain data you would like to migrate.
 
 ```bash
-symfony mount:upload -e main --mount web/sites/default/files --source ./web/sites/default/files
-symfony mount:upload -e main --mount private --source ./private
+upsun mount:upload -e main --mount web/sites/default/files --source ./web/sites/default/files
+upsun mount:upload -e main --mount private --source ./private
 ```
 
 Note that `rsync` is picky about its trailing slashes, so be sure to include those.
@@ -349,7 +352,7 @@ Note that `rsync` is picky about its trailing slashes, so be sure to include tho
 </details>
 
 With your application now deployed on Upsun, things get more interesting.
-Run the command `symfony environment:branch new-feature` for your project, or open a trivial pull request off of your current branch.
+Run the command `upsun environment:branch new-feature` for your project, or open a trivial pull request off of your current branch.
 
 The resulting environment is an *exact* copy of production (or corresponding parent environment).
 It contains identical infrastructure to what's been defined in your configuration files, and even includes data copied from your production environment in its services.
@@ -377,10 +380,10 @@ After that, here are a collection of additional resources you might find interes
 After the environment has finished its deployment, you can investigate issues that occured on startup, `deploy` and `post_deploy` hooks, and generally at runtime using the CLI. Run the command:
 
 ```bash
-symfony ssh
+upsun ssh
 ```
 
-If you are running the command outside of a local copy of the project, you will need to include the `-p` (project) and/or `-e` (environment) flags as well.
+If you are running the command outside a local copy of the project, you will need to include the `-p` (project) and/or `-e` (environment) flags as well.
 Once you have connected to the container, [logs](https://docs.upsun.com/development/logs.html#container-logs) are available within `/var/log/` for you to investigate.
 
 </details>
@@ -390,7 +393,7 @@ Once you have connected to the container, [logs](https://docs.upsun.com/developm
 <summary><strong>Rebuilding cache</strong></summary><br/>
 
 You may run into a database error after installing Symfony on your production environment initially.
-To fix, SSH into the application container (`symfony ssh`) and rebuild the cache using Symfony console:
+To fix, SSH into the `api` application container (`upsun ssh`) and rebuild the cache using Symfony console:
 
 ```bash
 php bin/console cache:clear
@@ -476,9 +479,9 @@ See something that's wrong with this template that needs to be fixed? Something 
 <p align="center">
 <strong>How to contribute</strong>
 <br /><br />
-<a href="https://github.com/flovntp/upsun_multi-app-example/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/flovntp/upsun_multi-app-example/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Submit a feature request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/flovntp/upsun_multi-app-example/pulls"><strong>Open a pull request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/upsun/bigfoot-multiapp-example/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/upsun/bigfoot-multiapp-example/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Submit a feature request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/upsun/bigfoot-multiapp-example/pulls"><strong>Open a pull request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <br />
 </p>
 <br />
@@ -493,8 +496,8 @@ See something that's wrong with this template that needs to be fixed? Something 
 <h3 align="center"><strong>Thanks to all of our amazing contributors!</strong></h3>
 <br/>
 <p align="center">
-<a href="https://github.com/flovntp/upsun_multi-app-example/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=flovntp/upsun_multi-app-example" />
+<a href="https://github.com/upsun/bigfoot-multiapp-example/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=upsun/bigfoot-multiapp-example" />
 </a>
 </p>
 
