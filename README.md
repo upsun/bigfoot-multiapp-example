@@ -427,8 +427,7 @@ This template includes a starting [`.blackfire.yml`](.blackfire.yml) file that c
 
 This template is maintained by the Upsun Developer Relations team, and they will be notified of all issues and pull requests you open here.
 
-- **Community:** Share your question with the community, or see if it's already been asked on our [Community site](https://community.platform.sh).
-- **Slack:** If you haven't done so already, you can join Upsun's [public Slack](https://chat.platform.sh/) channels and ping the `@devrel_team` with any questions.
+- **Discord:** If you haven't done so already, you can join Upsun's community on [Discord](https://discord.gg/z2YQzTeZqY) channels and ping the `@devrel_team` with any questions.
 
 
 ### About Upsun
@@ -458,14 +457,6 @@ Our key features include:
 
   Leverage our public API along with custom tools like [Source Operations](https://docs.upsun.com/configuration/app/source-operations.html) and [Activity Scripts](https://docs.upsun.com/integrations/activity.html) to [manage thousands of applications](https://youtu.be/MILHG9OqhmE) - their dependency updates, fresh content, and upstream code.
 
-
-To find out more, check out the demo below and go to our [website](https://platform.sh/product/).
-
-<br/>
-<p align="center">
-<a href="https://platform.sh/demo/"><img src="https://img.youtube.com/vi/ny2YeD6Qt3M/0.jpg" alt="The Upsun demo"></a>
-</p>
-
 </details>
 
 <h2 align="center">Contribute</h2>
@@ -487,10 +478,9 @@ See something that's wrong with this template that needs to be fixed? Something 
 <br />
 <p align="center">
 <strong>Need help?</strong>
-<br /><br />
-<a href="https://community.platform.sh"><strong>Ask the Upsun Community</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://chat.platform.sh"><strong>Join us on Slack</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<br />
+<p/>
+<p align="center">
+<a href="https://discord.gg/z2YQzTeZqY"><strong>Join us on Discord</strong></a>
 </p>
 <br />
 <h3 align="center"><strong>Thanks to all of our amazing contributors!</strong></h3>
